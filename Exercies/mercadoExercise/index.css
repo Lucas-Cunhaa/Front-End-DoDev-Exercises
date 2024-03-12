@@ -1,0 +1,108 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.header{
+    background-color: rgb(255, 251, 0);
+    height: 14vh;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(0, 0, 0);
+}
+.searchSection{
+    height: 7vh;
+    text-align: center;
+}
+#searchBar{
+    height : 2.5vh;
+    margin-top: 2vh;
+}
+.navBar{
+    height: 7vh;
+    text-align: center;
+    border-style: solid rgb(0, 0, 0) 4px;
+    line-height: 6vh;
+}
+.navOptions{
+    vertical-align: middle;
+    line-height: normal;
+    padding-left: 5vw;
+    
+}
+.content{
+    height: 86vh;
+    text-align: center;
+    background-color: rgb(207, 207, 201);
+}
+.benefits{
+    height: 15vh;
+    width: 80.5vw;
+    margin-top : 5vh;
+    display: inline-block;
+    background-color: rgb(133, 133, 133);
+    border-radius: 1vh;
+}
+.offer, .firstOffer{
+    height: 15vh;
+    width: 20vw; 
+    float: left; 
+    text-align: left;
+  
+    
+}
+.firstOffer{
+    border-right: solid black 2px;
+    
+}
+
+.offerTitle{
+    margin-left:50px;
+    margin-top: 3vh;
+    font-size: 3vh;
+    
+}
+.subTitle{
+    margin-left:50px;
+    margin-top: 1vh;
+}
+
+
