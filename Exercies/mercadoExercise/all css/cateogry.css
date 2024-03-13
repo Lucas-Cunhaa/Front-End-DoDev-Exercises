@@ -66,66 +66,13 @@ table {
     margin-left: 2vw;
     font-size: large;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
 }
 .navOptions:hover{
     padding : 0.1%;
     transition-property: padding;
     transition-duration: 0.5s;
     background-color: rgb(255, 255, 255);;
-}
-.content{
-    height: 86vh;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-}
-.benefits{
-    height: 15vh;
-    background-color: rgb(197, 191, 191);
-    width: 80vw;
-    margin-top: 5vh;
-    display: inline-block;
-    border-radius: 1vw;
-}
-.offer, .firstOffer{
-    height: 15vh;
-    width: 20vw; 
-    float: left; 
-    text-align: left;
-}
-.firstOffer{
-    border-right: solid black 2px;
-    
-}
-.offerTitle{
-    margin-top: 3vh;
-    font-size: 3.5vh;
-}
-.offerTitle, .subTitle{
-  margin-left: 3vw;
-}
-.subTitle{
-    margin-top: 1.5vh;
-}
-
-.contents{
-    width: 80.2vw;
-    margin-top: 5vh;
-    display: inline-block;
-   
-}
-.marketItem{
-    background-color: white;
-    height: 224px;
-    width: 15vw;
-    float: left ;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
-    overflow: hidden;
-    
-}
-
-.marketItem:hover{
-    height: 330px;
-    transition-duration: 0.5s;
-    transition-timing-function: linear ;
 }

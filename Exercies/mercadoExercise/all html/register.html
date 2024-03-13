@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../all css/register.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="header">
+        <article class="searchSection  headerPart">
+          <input id="searchBar" type="text" />
+        </article>
+        <article class="navBar headerPart">
+          <a class="navOptions" href="./index.html" >Home</a>
+          <a class="navOptions" href="./categorys.html" >Categorys</a>
+          <a class="navOptions" href="./dailyOffers.html">Daily Offers</a>
+          <a class="navOptions" href="./historyc.html">Historyc</a>
+          <a class="navOptions" href="./fashion.html">Fashion</a>
+          <a class="navOptions" href="./register.html">Register</a>
+        </article>
+      </section>
+      <section class="content">
+        <section class="form">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="sex">Sex</label>
+                    <select id="sex" name="sex" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <input class="button" type="submit" value="Enviar">
+                </div>
+            </form>
+        </section>
+      </section>
+</body>
+</html>
