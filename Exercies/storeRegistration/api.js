@@ -14,13 +14,21 @@ app.get('/store',  (req, res) => {
 
 app.get('/store/:id', (req, res) => {
     console.log("API GET BY ID")
-    res.status(200).send(forms)
+    const id = req.params.id
+    let index;
+    forms.forEach((element, i) => {
+        if ( element.id == id){
+            index = i
+        }
+    })
+    res.status(200).send(forms[index])
 })
-
+let lastId = 0;
 app.post('/store', (req, res) => {
     console.log("API POST USER")
     const { Name, Adress } = req.body; 
-    const newForm = { Name, Adress };
+    const id = ++lastId
+    const newForm = { Name, Adress , id};
     forms.push(newForm); 
     res.status(200).send(newForm)
 });
@@ -36,6 +44,6 @@ app.delete('/store/:id', (req, res) => {
 })
 
 app.listen(3002, () => {
-    console.log('Executed on 3000 door')
+    console.log('Executed on 3002 door')
 });
 

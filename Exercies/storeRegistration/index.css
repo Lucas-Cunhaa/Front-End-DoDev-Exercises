@@ -45,9 +45,10 @@ table {
 .content{
     text-align: center;
     height: 100vh;
+    background-color: rgb(197, 197, 193);
 }
 h2{
-    font-size: 5vw;
+    font-size: 35px;
     background-color: aqua;
     margin-bottom: 5vh;
 }
@@ -74,4 +75,31 @@ h2{
     background-color: rgb(0, 255, 13);
     border:  rgb(0, 255, 13);
     transition: 0.75s;
+}
+.searchForm{
+    padding-top: 10vh;
+    width: 200px;
+    display: inline-block;
+   
+}
+.searchForm label{
+    font-size: 30px;
+    background-color: aqua;
+    
+}
+.search{
+    float: left;
+}
+#search{
+    width: 50px;
+    height: 25px;
+    margin-left: 20px;
+}
+#searchButton{
+    width: 100px;
+    height: 25px;
+    background-color: aqua;
+    border-radius: 50px;
+    margin-left: 10px;
+    margin-bottom :100px;
 }

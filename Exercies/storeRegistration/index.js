@@ -1,6 +1,8 @@
 const input = document.querySelectorAll("form input");
 const nameF = document.querySelector(".inputFormName");
 const adress = document.querySelector(".inputFormAdress");
+const searchForm = document.querySelector('.searchForm')
+const inputSearch = document.querySelector('#search')
 const form = document.querySelector("form");
 let forms = [];
 class Form {
@@ -59,3 +61,13 @@ function Get() {
  })
 
 }
+searchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const id = inputSearch.value
+    fetch(`http://localhost:3002/store/${id}`).then(res => {return res.json()}).then(data => {
+      console.log(data)
+    })
+})
+
+
+
