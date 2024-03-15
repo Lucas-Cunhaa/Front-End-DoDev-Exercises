@@ -2,6 +2,7 @@ const input = document.querySelectorAll("form input");
 const nameF = document.querySelector(".inputFormName");
 const adress = document.querySelector(".inputFormAdress");
 const form = document.querySelector("form");
+let forms = [];
 class Form {
   Name;
   Adress;
@@ -27,42 +28,34 @@ input.forEach((element) => {
   element.addEventListener("keyup", getText);
 });
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit",  (e) => {
   e.preventDefault();
   const newForm = new Form(nameF.value, adress.value);
+  forms.push(newForm);
   
-   fetch("https://apigenerator.dronahq.com/api/v9yZ0bYm/dataform", {
-    method: "POST",
-
-    headers: {
-      "Content-Type": "application/json",
-    },
-    redirect: 'follow',
-    
-    mode: 'cors',
-    
-    cache: 'no-cache',
-
-    credentials: 'same-origin',
-
-    referrerPolicy: 'no-referrer',
-
-    body: JSON.stringify(newForm),
-  })
-
-    .then((res) => {
-      return res.json();
-    })
-
-    .then((res) => res.json())
-    
-    .then((data) => {
-      console.log(data); 
-    })
-
-    .catch((error) => {
-      console.error("Erro:", error);
-    });
-  
-    
+       fetch("http://localhost:3002/store", {
+          method: 'POST',
+          mode: 'cors',
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+          body: JSON.stringify(newForm)
+      }).then(res => {
+        return res.json()
+      }).then(data => {
+        console.log(data)
+      })
+    Get()
+   
 });
+
+function Get() {
+  fetch("http://localhost:3002/store").then(res => {
+   console.log(res)
+ })
+
+}
