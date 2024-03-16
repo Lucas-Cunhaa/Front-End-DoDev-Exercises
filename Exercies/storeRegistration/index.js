@@ -1,9 +1,10 @@
 const input = document.querySelectorAll("form input");
-const nameF = document.querySelector(".inputFormName");
-const adress = document.querySelector(".inputFormAdress");
+const postForm = document.querySelector(".postForm");
+const postName = document.querySelector(".postName");
+const postAdress = document.querySelector(".postAdress");
 const searchForm = document.querySelector('.searchForm')
 const inputSearch = document.querySelector('#search')
-const form = document.querySelector("form");
+
 let forms = [];
 class Form {
   Name;
@@ -30,9 +31,9 @@ input.forEach((element) => {
   element.addEventListener("keyup", getText);
 });
 
-form.addEventListener("submit",  (e) => {
+postForm.addEventListener("submit",  (e) => {
   e.preventDefault();
-  const newForm = new Form(nameF.value, adress.value);
+  const newForm = new Form(postName.value, postAdress.value);
   forms.push(newForm);
   
        fetch("http://localhost:3002/store", {

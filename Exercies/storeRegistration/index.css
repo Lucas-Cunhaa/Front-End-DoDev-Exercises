@@ -52,26 +52,26 @@ h2{
     background-color: aqua;
     margin-bottom: 5vh;
 }
-.form label{
+.Postform label{
     display: block;
     margin-bottom: 5px;
     font-size: 20px;
 }
-.form input{
+.Postform input{
     width: 250px;
     
 }
 #end, #open{
     width: 80px;
 }
-#button{
+#postButton{
     margin-top: 20px;
     width: 100px;
     height: 25px;
     background-color: aqua;
     border-radius: 50px;
 }
-#button:hover{
+#postButton:hover{
     background-color: rgb(0, 255, 13);
     border:  rgb(0, 255, 13);
     transition: 0.75s;
