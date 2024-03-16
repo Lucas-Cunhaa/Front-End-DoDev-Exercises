@@ -78,14 +78,8 @@ h2{
 }
 .searchForm{
     padding-top: 10vh;
-    width: 200px;
+    width: 300px;
     display: inline-block;
-   
-}
-.searchForm label{
-    font-size: 30px;
-    background-color: aqua;
-    
 }
 .search{
     float: left;
@@ -93,7 +87,7 @@ h2{
 #search{
     width: 50px;
     height: 25px;
-    margin-left: 20px;
+    margin-left: 70px;
 }
 #searchButton{
     width: 100px;
@@ -102,4 +96,9 @@ h2{
     border-radius: 50px;
     margin-left: 10px;
     margin-bottom :100px;
+}
+#searchButton:hover{
+    background-color: rgb(0, 255, 13);
+    border:  rgb(0, 255, 13);
+    transition: 0.75s;
 }

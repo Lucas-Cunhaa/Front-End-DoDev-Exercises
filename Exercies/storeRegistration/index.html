@@ -10,7 +10,7 @@
     <section class="content"> 
         <section class="form"> 
             <h2>CONTACT FORM</h2>
-            <form class="Postform" method="post">
+            <form class="postform" method="post">
                 <label for="name">Name</label>
                 <input  class = "postName" type="text" id="name" name="name" required><br><br>
             
@@ -22,10 +22,29 @@
             </form>
             <form class="searchForm" method="get">
             <div> 
-                <label for="search">SEARCH THE STORE</label><br>
+                <h2>EDIT THE STORE</h2>
                 <input  class = "search" type="number" id="search" name="search"  required></input>
                 <input  class = "search" id ="searchButton"  type="submit" value="SEND"></input>
             </div>
+            </form>
+            <form class="putForm" method="put">
+                <h2>EDIT THE STORE</h2>
+                <label for="id">ID</label>
+                <input  class = "putId" type="number" id="putId" name="id" required><br><br>
+            
+                <label for="type">WHAT TO CHANGE</label>
+                <input  class = "putType" type="text" id="type" name="type" required><br><br>
+
+                <label for="content">TYPE THE CONTENT</label>
+                <input  class = "putContent" type="text" id="content" name="content" required><br><br>
+                <input id ="putButton"  type="submit" value="SEND">
+
+                <form class="deleteForm" method="Delete">
+                    <h2>DELETE</h2>
+                    <label for="id">WHAT STORE TO DELETE (ID)</label>
+                    <input  class = "deleteId" type="number" id="deleteId" name="id" required><br><br>
+                    
+                    <input id ="putButton"  type="submit" value="SEND">
             </form>
         </section>
     </section>
