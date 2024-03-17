@@ -1,9 +1,19 @@
 const input = document.querySelectorAll("form input");
+
 const postButton = document.querySelector("#postButton");
 const postName = document.querySelector(".postName");
 const postAdress = document.querySelector(".postAdress");
-const searchButton = document.querySelector('#searchButton')
 
+const searchButton = document.querySelector('#searchButton')
+const searchId = document.querySelector('searchId')
+
+const putButton = document.querySelector('#putButton')
+const putId = document.querySelector('.putId')
+const putType = document.querySelector('.putType')
+const putContent = document.querySelector('putContent')
+
+const deleteButton = document.querySelector('#deleteButton')
+const deleteId = document.querySelector('#deleteId')
 let forms = [];
 class Form {
   Name;
