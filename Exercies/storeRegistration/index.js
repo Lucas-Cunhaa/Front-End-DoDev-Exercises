@@ -1,9 +1,8 @@
 const input = document.querySelectorAll("form input");
-const postForm = document.querySelector(".postForm");
+const postButton = document.querySelector("#postButton");
 const postName = document.querySelector(".postName");
 const postAdress = document.querySelector(".postAdress");
-const searchForm = document.querySelector('.searchForm')
-const inputSearch = document.querySelector('#search')
+const searchButton = document.querySelector('#searchButton')
 
 let forms = [];
 class Form {
@@ -31,7 +30,7 @@ input.forEach((element) => {
   element.addEventListener("keyup", getText);
 });
 
-postForm.addEventListener("submit",  (e) => {
+postButton.addEventListener("submit",  (e) => {
   e.preventDefault();
   const newForm = new Form(postName.value, postAdress.value);
   forms.push(newForm);
@@ -62,7 +61,7 @@ function Get() {
  })
 
 }
-searchForm.addEventListener('submit', (e) => {
+searchButton.addEventListener('submit', (e) => {
     e.preventDefault();
     const id = inputSearch.value
     fetch(`http://localhost:3002/store/${id}`).then(res => {return res.json()}).then(data => {
