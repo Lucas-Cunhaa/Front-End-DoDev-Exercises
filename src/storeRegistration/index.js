@@ -13,7 +13,7 @@ const putType = document.querySelector('.putType')
 const putContent = document.querySelector('.putContent')
 
 const deleteForm = document.querySelector('.deleteForm')
-const deleteId = document.querySelector('#deleteId')
+const deleteId = document.querySelector('.deleteId')
 
 class Form {
   Name;
@@ -107,5 +107,28 @@ putForm.addEventListener('submit', (e) => {
       })
 
 })
+
+deleteForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const id = deleteId.value
+
+  fetch(`http://localhost:3005/store/${id}`, {
+          method: 'DELETE',
+          mode: 'cors',
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+      }).then(res => {
+        return res.json()
+      }).then(data => {
+        console.log(data)
+      })
+
+})
+
 
 

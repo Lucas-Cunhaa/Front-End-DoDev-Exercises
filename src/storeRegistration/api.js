@@ -51,9 +51,16 @@ app.put('/store/:id', (req, res) => {
 })
 
 app.delete('/store/:id', (req, res) => {
-    console.log("API delete USER")
-    res.status(200).send(req.params.id)
-})
+    console.log("API DELETE USER");
+    const id = req.params.id
+    const foundIndex = forms.findIndex(form => form.id == id);
+    if(foundIndex != -1) {
+        forms.splice(foundIndex, 1);
+        res.status(200).send(forms);
+    } else {
+        res.status(404).send('ID NOT FOUND.');
+    }
+});
 
 app.listen(3005, () => {
     console.log('Executed on 3005 door')
