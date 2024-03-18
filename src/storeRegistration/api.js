@@ -27,16 +27,27 @@ let lastId = 0;
 
 app.post('/store', (req, res) => {
     console.log("API POST USER")
-    const { Name, Adress } = req.body; 
+    const { Name, Address } = req.body; 
     const id = ++lastId
-    const newForm = { Name, Adress , id};
+    const newForm = { Name, Address , id};
     forms.push(newForm); 
     res.status(200).send(newForm)
 });
 
 app.put('/store/:id', (req, res) => {
     console.log("API PUT USER")
-    res.status(200).send(forms[index])
+    const id = Number(req.params.id)
+    const name = req.body.Name 
+    const address = req.body.Address 
+    let foundIndex = forms.findIndex(form => form.id == id)
+    if(foundIndex !== -1 ){
+        forms[foundIndex].Name = name; 
+        forms[foundIndex].Address = address; 
+        res.status(200).send(forms[foundIndex]); 
+    } else {
+        res.status(404).send('INVALID ID')
+    }
+    res.status(200).send()
 })
 
 app.delete('/store/:id', (req, res) => {

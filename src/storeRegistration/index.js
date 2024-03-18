@@ -2,7 +2,7 @@ const input = document.querySelectorAll("form input");
 
 const postForm = document.querySelector('.postForm')
 const postName = document.querySelector(".postName");
-const postAdress = document.querySelector(".postAdress");
+const postAddress = document.querySelector(".postAddress");
 
 const searchId = document.querySelector('.searchId')
 const searchByIdForm = document.querySelector('.searchForm')
@@ -10,7 +10,7 @@ const searchByIdForm = document.querySelector('.searchForm')
 const putForm = document.querySelector('.putForm')
 const putId = document.querySelector('.putId')
 const putType = document.querySelector('.putType')
-const putContent = document.querySelector('putContent')
+const putContent = document.querySelector('.putContent')
 
 const deleteForm = document.querySelector('.deleteForm')
 const deleteId = document.querySelector('#deleteId')
@@ -20,7 +20,7 @@ class Form {
   Adress;
   constructor(name, adress) {
     this.Name = name;
-    this.Adress = adress;
+    this.Address = adress;
   }
 }
 
@@ -42,7 +42,7 @@ input.forEach((element) => {
 
 postForm.addEventListener("submit",  (e) => {
   e.preventDefault();
-  const newForm = new Form(postName.value, postAdress.value);
+  const newForm = new Form(postName.value, postAddress.value);
   console.log(newForm)
        fetch("http://localhost:3005/store", {
           method: 'POST',
@@ -71,6 +71,7 @@ function Get() {
    console.log(res)
  })
 
+
 }
 searchByIdForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -82,5 +83,29 @@ searchByIdForm.addEventListener('submit', (e) => {
     })
 })
 
+putForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const id = putId.value
+  const name = putType.value 
+  const address = putContent.value
+
+  fetch(`http://localhost:3005/store/${id}`, {
+          method: 'PUT',
+          mode: 'cors',
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+          body: JSON.stringify( {"Name" : name, "Address" : address, "id" : id})
+      }).then(res => {
+        return res.json()
+      }).then(data => {
+        console.log(data)
+      })
+
+})
 
 
