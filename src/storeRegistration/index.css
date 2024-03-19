@@ -44,61 +44,44 @@ table {
 
 .content{
     text-align: center;
-    height: 100vh;
     background-color: rgb(197, 197, 193);
+    height: 130vh;
+}
+.postForm{
+    height: 10vh;
 }
 h2{
     font-size: 35px;
     background-color: aqua;
     margin-bottom: 5vh;
 }
-.Postform label{
-    display: block;
-    margin-bottom: 5px;
-    font-size: 20px;
+.searchForm{
+    margin-top: 10vh;
+    height: 10vh;
 }
-.Postform input{
-    width: 250px;
-    
-}
-#end, #open{
-    width: 80px;
-}
-#postButton{
-    margin-top: 20px;
-    width: 100px;
+.button{
+    width: 90px;
     height: 25px;
     background-color: aqua;
     border-radius: 50px;
 }
-#postButton:hover{
+.button:hover{
     background-color: rgb(0, 255, 13);
     border:  rgb(0, 255, 13);
     transition: 0.75s;
 }
-.searchForm{
-    padding-top: 10vh;
-    width: 300px;
-    display: inline-block;
-}
-.search{
-    float: left;
-}
-#search{
+.number{
     width: 50px;
     height: 25px;
-    margin-left: 70px;
 }
-#searchButton{
-    width: 100px;
-    height: 25px;
-    background-color: aqua;
-    border-radius: 50px;
-    margin-left: 10px;
-    margin-bottom :100px;
+.putForm{
+    margin-top: 15vh;
+    height: 20vh;
 }
-#searchButton:hover{
-    background-color: rgb(0, 255, 13);
-    border:  rgb(0, 255, 13);
-    transition: 0.75s;
+.deleteForm{
+    margin-top: 15vh;
+    height: 10vh;
+}
+#delete{
+    margin-right: 109px;
 }
